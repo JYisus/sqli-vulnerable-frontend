@@ -1,0 +1,40 @@
+header {
+    background-color: whitesmoke;
+    height: 100px;
+    width: 100%;
+    line-height: 80px;
+  }
+  
+  nav ul li {
+    text-align: left;
+    float: left;
+    list-style: none;
+    margin: 10px;
+    margin-left: 20px;
+  }
+  
+  
+  li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+  }
+
+  #user-management {
+    text-align: right;
+    float: right;
+    list-style: none;
+    margin: 10px;
+  
+  }
+  
+  #user-management a {
+    text-decoration: none;
+    font-size: 20px;
+    text-align: right;
+    margin: 10px;
+    color: #333
+    ;
+  }
+  

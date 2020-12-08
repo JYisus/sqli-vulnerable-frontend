@@ -1,0 +1,17 @@
+article {
+  background-color: #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: left;
+  margin: 0 100px;
+}
+
+.article-text {
+  margin-top: 10px;
+
+}
+
+.publication-date {
+  font-weight: bold;
+  /* margin-bottom: 20px; */
+}
