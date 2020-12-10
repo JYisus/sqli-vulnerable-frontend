@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Header.css"
-const Header = () => (
+const Header = ({onClickLogin, onClickLogout, isLogged}) => (
     <header className="header-content">
         <nav>
             <ul id="nav-links">
@@ -11,7 +11,10 @@ const Header = () => (
         </nav>
         <div id="user-management">
             <a href="#">Register</a>
-            <a href="#">Log in</a>
+            { !isLogged
+            ? <input type="submit" value="Login" onClick={onClickLogin} className="header-button-login"/>
+            : <input type="submit" value="Logout" onClick={onClickLogout} className="header-button-logout" id="logout"/>
+            }
         </div>
     </header>
 )

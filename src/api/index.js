@@ -24,6 +24,19 @@ export  const getArticles = async (id) => {
     // return articles
 }
 
+export const login = async (data) => {
+    const { email, password } = data
+    if (email === "asdf") {
+        return true
+    }
+    return false
+    // try {
+    //     const result = await fetch(`${BACKEND_ENDPOINT}/login`,{
+    //         method: "POST"
+    //     })
+    // } catch()
+}
+
 // export const getArticles = () => new Promise((resolve, reject) => {
 //     setTimeout(() => {
 //         return resolve(FAKE_DATA)

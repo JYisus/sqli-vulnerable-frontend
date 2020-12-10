@@ -38,3 +38,42 @@ header {
     ;
   }
   
+  .header-button-login {
+    float: right;
+    margin: 18px;
+    
+  }
+
+  .header-button-logout {
+    float: right;
+    margin: 18px;
+    
+  }
+
+  input[type=submit], input[type=button]{
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+     display: block;
+    margin-top:6px;
+}
+
+input[type=submit] .header-button-logout,input[type=button] .header-button-logout {
+  background-color: #a40000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+   display: block;
+  margin-top:6px;
+}
+#logout {
+
+  background-color: #a40000;
+}
+
+
