@@ -21,7 +21,6 @@ class News extends Component {
 
         try {
             const articles = await getArticles(1)
-        console.log(articles)
 
             this.setState({articles, isLoading: false})
         } catch(error) {
@@ -40,14 +39,12 @@ class News extends Component {
         //     method: "GET",
         //     data: data
         // })
-        console.log(res)
         this.setState({articles: res})
 
     }
 
     render() {
         const { articles, isLoading, error } = this.state
-        console.log(articles)
         if(isLoading) return (<Loading message="Cargando..."/>)
         if(error) return <p className="error">{error.message}</p>
         return (

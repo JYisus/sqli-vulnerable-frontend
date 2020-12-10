@@ -31,11 +31,9 @@ class Login extends Component {
         this.setState({showSending: true})
         login({email: this.state.email, password: this.state.password})
         .then(logged => {
-            console.log(`islogged ${logged}`)
             if(logged) {
                 this.setState({hasError: false, showSending: true, isLogged: true})
                 onClose(true)
-                console.log("nooooooo")
                 
             } else{
                 this.setState({hasError: true, showSending: false})

@@ -30,7 +30,6 @@ class App extends Component {
 
   handleCloseLogin(logged) {
       if(logged) {
-        console.log(`logged ${logged}`)
         this.setState({showLogin: false, logged: true})
       } else {
         this.setState({showLogin: false})

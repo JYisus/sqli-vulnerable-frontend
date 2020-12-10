@@ -9,12 +9,12 @@ const FAKE_DATA = [
     }
 ]
 
-const BACKEND_ENDPOINT = "http://localhost:8080/news"
+const NEWS_ENDPOINT = "http://localhost:8080/news"
+const LOGIN_ENDPOINT = "http://localhost:8080/login"
 
 export  const getArticles = async (id) => {
     try {
-        const articles = await fetch(`${BACKEND_ENDPOINT}?id=${id}`)
-        console.log(articles)
+        const articles = await fetch(`${NEWS_ENDPOINT}?id=${id}`)
         return articles.json()  
     } catch (error) {
         console.error(error)
@@ -26,15 +26,20 @@ export  const getArticles = async (id) => {
 
 export const login = async (data) => {
     const { email, password } = data
-    if (email === "asdf") {
-        return true
+
+    try {
+        const result = await fetch(LOGIN_ENDPOINT,{
+            method: "POST",
+            body: JSON.stringify({"email": email, "password": password}),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+
+        return (result.status) !== 200 ? false : true
+    } catch(error) {
+        return false
     }
-    return false
-    // try {
-    //     const result = await fetch(`${BACKEND_ENDPOINT}/login`,{
-    //         method: "POST"
-    //     })
-    // } catch()
 }
 
 // export const getArticles = () => new Promise((resolve, reject) => {
