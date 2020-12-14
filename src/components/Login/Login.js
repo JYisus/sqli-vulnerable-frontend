@@ -58,8 +58,8 @@ class Login extends Component {
                     <label>email</label>
                     <input type="text" value={email} onChange={this.handleChange("email")} required/>
                     <label>password</label>
-                    <input type="text" value={password} onChange={this.handleChange("password")} required/>
-                    <input type="submit" onClick={this.handleSubmit} value="Submit" disabled={showSending}/>
+                    <input type="password" value={password} onChange={this.handleChange("password")} required/>
+                    <input type="submit" onClick={this.handleSubmit} value="Log in" disabled={showSending}/>
                 </form>
             </div>
         </div>)
