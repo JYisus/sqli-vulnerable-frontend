@@ -10,7 +10,7 @@ const Header = ({onClickLogin, onClickLogout, isLogged}) => (
             </ul>
         </nav>
         <div id="user-management">
-            <a href="#">Register</a>
+            { !isLogged && <a href="#">Register</a> }
             { !isLogged
             ? <input type="submit" value="Login" onClick={onClickLogin} className="header-button-login"/>
             : <input type="submit" value="Logout" onClick={onClickLogout} className="header-button-logout" id="logout"/>

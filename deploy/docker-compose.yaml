@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  frontend:
+    image: sqli-ui:latest
+    restart: always
+    ports:
+      - 3000:3000
+    environment:
+      BACKEND_ENDPOINT: "http://deploy_backend_1:8080"
+networks:
+  default:
+    external:
+      name: sqli-net

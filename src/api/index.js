@@ -1,3 +1,4 @@
+import config from "../config/index.js";
 const FAKE_DELAY = 2000
 const FAKE_DATA = [
     {
@@ -8,9 +9,11 @@ const FAKE_DATA = [
                 "Assumenda hic dolor, tempore, asperiores corporis quos perspiciatis"
     }
 ]
+const {BACKEND_ENDPOINT} = config
+const NEWS_ENDPOINT = `${BACKEND_ENDPOINT}/news`
+const LOGIN_ENDPOINT = `${BACKEND_ENDPOINT}/login`
 
-const NEWS_ENDPOINT = "http://localhost:8080/news"
-const LOGIN_ENDPOINT = "http://localhost:8080/login"
+
 
 export  const getArticles = async (id) => {
     try {
